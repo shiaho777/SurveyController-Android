@@ -23,6 +23,7 @@ local.properties
 *.aab
 *.ap_
 *.dex
+app/release/
 
 # 日志
 *.log

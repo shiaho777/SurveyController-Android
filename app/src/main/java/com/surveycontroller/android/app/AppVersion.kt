@@ -3,8 +3,8 @@ package com.surveycontroller.android.app
 /** 版本与 GitHub 仓库常量。对标桌面端 software/app/version.py。 */
 object AppVersion {
     const val VERSION = "4.0.6"
-    const val GITHUB_OWNER = "SurveyController"
-    const val GITHUB_REPO = "SurveyController"
+    const val GITHUB_OWNER = "shiaho777"
+    const val GITHUB_REPO = "SurveyController-Android"
 
     const val LATEST_RELEASE_API = "https://api.github.com/repos/$GITHUB_OWNER/$GITHUB_REPO/releases/latest"
     const val RELEASES_PAGE = "https://github.com/$GITHUB_OWNER/$GITHUB_REPO/releases"
