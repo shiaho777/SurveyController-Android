@@ -26,10 +26,13 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Decode signing keystore
-        if: ${{ secrets.SIGNING_KEYSTORE_BASE64 != '' }}
         env:
           SIGNING_KEYSTORE_BASE64: ${{ secrets.SIGNING_KEYSTORE_BASE64 }}
         run: |
+          if [ -z "$SIGNING_KEYSTORE_BASE64" ]; then
+            echo "::warning::SIGNING_KEYSTORE_BASE64 未配置，将构建未签名 APK"
+            exit 0
+          fi
           echo "$SIGNING_KEYSTORE_BASE64" | base64 -d > surveycontroller.jks
           echo "Keystore decoded: $(stat -c%s surveycontroller.jks) bytes"
 
