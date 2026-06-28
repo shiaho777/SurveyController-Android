@@ -15,6 +15,11 @@ build/
 # 本地配置（含 SDK 路径等敏感信息）
 local.properties
 
+# 签名 keystore（绝对不能提交！CI 通过 Secrets 注入）
+*.jks
+*.keystore
+keystore.properties
+
 # macOS
 .DS_Store
 
