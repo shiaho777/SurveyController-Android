@@ -127,16 +127,6 @@ flowchart TB
   credamo_submit --> result
 ```
 
-### 技术栈
-
-- **Kotlin 2.x** + **Jetpack Compose** + **Material 3**（Material You）
-- **Kotlin Coroutines + Flow**（对应桌面端 asyncio 引擎）
-- **OkHttp**（HTTP 精确控制） + **Jsoup**（HTML 解析）
-- **kotlinx.serialization**（JSON / 配置编解码）
-- **Hilt**（依赖注入）
-- **DataStore**（设置/配置持久化）
-- **CameraX + ZXing**（扫码 / 二维码识别）
-
 ## 交流群
 
 如有疑问或需要技术支持，可加入QQ群：
