@@ -29,7 +29,6 @@
 5. **指定ip地区** - 支持随机IP或指定特定地区IP提交
 6. **配置导入导出** - 保存配置文件便于后续复用，跨设备同步
 7. **AI 主观题作答** - 填空题自动生成作答内容（限时免费）
-8. **极简体积** - APK 仅 3.14 MB，只打包 arm64-v8a，覆盖 95%+ 现代真机
 
 ## 开始使用
 
@@ -168,6 +167,9 @@ flowchart TB
 感谢以下贡献者对本项目的支持：
 
 <div style="display: flex; gap: 10px;">
+  <a href="https://github.com/hungryM0">
+    <img src="https://github.com/hungryM0.png" width="50" height="50" alt="hungryM0" style="border-radius: 50%;" />
+  </a>
   <a href="https://github.com/shiaho777">
     <img src="https://github.com/shiaho777.png" width="50" height="50" alt="shiaho777" style="border-radius: 50%;" />
   </a>
