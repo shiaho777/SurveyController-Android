@@ -51,18 +51,18 @@ jobs:
           echo "name=$(basename "$apk_path")" >> "$GITHUB_OUTPUT"
           echo "Found APK: $apk_path"
 
-      - name: Rename APK to include version
+      - name: Rename APK to include version (uppercase .APK extension)
         if: startsWith(github.ref, 'refs/tags/')
         run: |
-          mv "${{ steps.apk.outputs.path }}" "app/build/outputs/apk/release/SurveyController-${GITHUB_REF_NAME}.apk"
-          echo "Renamed to SurveyController-${GITHUB_REF_NAME}.apk"
+          mv "${{ steps.apk.outputs.path }}" "app/build/outputs/apk/release/SurveyController-${GITHUB_REF_NAME}.APK"
+          echo "Renamed to SurveyController-${GITHUB_REF_NAME}.APK"
 
       - name: Upload APK artifact (workflow_dispatch only)
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}
         uses: actions/upload-artifact@v4
         with:
           name: SurveyController-apk
-          path: app/build/outputs/apk/release/*.apk
+          path: app/build/outputs/apk/release/*.[aA][pP][kK]
 
       - name: Create GitHub Release and Upload APK
         if: startsWith(github.ref, 'refs/tags/')
@@ -71,4 +71,4 @@ jobs:
           tag_name: ${{ github.ref_name }}
           name: ${{ github.ref_name }}
           generate_release_notes: true
-          files: app/build/outputs/apk/release/*.apk
+          files: app/build/outputs/apk/release/*.APK
